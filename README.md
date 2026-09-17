@@ -26,7 +26,7 @@ limitations and outputs can be inspected and defended.
 | Repository | Role | Public evidence | Status |
 |---|---|---|---|
 | [Corredor de Altura](https://github.com/MartinnCG/corredor-altura) | Applied geospatial data science | Calibrated 130 km corridor, reproducible feature pipeline, relative-exposure model, GIS products, dashboard and automated data-contract checks | [Analytical v1.0](https://github.com/MartinnCG/corredor-altura/releases/tag/v1.0) |
-| [Edge Operational Evidence System](https://github.com/MartinnCG/edge-operational-evidence-system) | Flagship systems engineering | Canonical events, durable ledger, deterministic replay, quality campaigns, verified bundles, real MQTT, recovery and certificate-based authorization | [v0.2.0](https://github.com/MartinnCG/edge-operational-evidence-system/releases/tag/v0.2.0) |
+| [Edge Operational Evidence System](https://github.com/MartinnCG/edge-operational-evidence-system) | Flagship systems engineering | Canonical events, durable ledger, deterministic replay, privacy-preserving historical qualification, verified bundles, real MQTT, recovery and certificate-based authorization | [v0.2.0](https://github.com/MartinnCG/edge-operational-evidence-system/releases/tag/v0.2.0) + [M9A](https://github.com/MartinnCG/edge-operational-evidence-system/blob/main/docs/m9a-historical-qualification-v1.md) |
 | [AI/ML Systems Architecture Labs](https://github.com/MartinnCG/ai-ml-systems-architecture-labs) | Focused technical experiments | Explicit boundaries, invariants, failure modes and minimal reference implementations | Active laboratory; experiments only when tied to a concrete system question |
 | [Deterministic Replay System](https://github.com/MartinnCG/deterministic-replay-system) | Reference mechanism | State reconstruction from an ordered event stream and integrity verification | Prototype; the mechanism is represented in the Edge evidence path |
 
@@ -56,11 +56,18 @@ Release v0.2.0 proves, within its documented test boundary:
 - mutual TLS, certificate-derived identities and role-separated ACLs;
 - negative campaigns in which unauthorized inputs cannot mutate the ledger.
 
-The next field milestone, M9, is intentionally deferred until the physical
-hardware inventory is confirmed. It will target 30 active device-days across
-repeated deployments and will distinguish planned offline windows from
-unplanned failures. It will not claim uninterrupted availability or calibrated
-sensing.
+M9A has now qualified a private historical field-derived stream through an
+explicit import boundary: 38,349 records were accepted with zero rejections,
+six source streams were pseudonymised and two independent replays produced the
+same final state. Only aggregate results and safe source digests are public.
+
+This is migration and evidence-reconstruction proof, not a claim of current
+hardware operation, live transport latency, uninterrupted uptime, calibrated
+sensing or safety suitability. Those live-system claims remain reserved for a
+future M9B redeployment campaign.
+
+See the portfolio case:
+[Qualifying historical field evidence](case-studies/m9a-historical-field-evidence.md).
 
 ## Engineering principles
 
@@ -90,10 +97,11 @@ consistent ability to frame, build, verify and communicate operational systems.
 ## Current sequence
 
 1. Maintain the frozen Corredor de Altura analytical v1 release.
-2. Maintain Edge Operational Evidence System v0.2.0 as the verified software
-   boundary.
-3. Inventory the minimum field kit before implementing M9.
-4. Execute M9 only when physical data and repeated deployments can be evidenced
+2. Maintain Edge Operational Evidence System v0.2.0 as the verified live-stack
+   software boundary.
+3. Use the completed M9A result as evidence of governed historical migration
+   and deterministic reconstruction.
+4. Defer M9B until physical data and repeated redeployments can be evidenced
    honestly.
 5. Publish architecture labs only when they test a concrete system question.
 6. Connect proven components into governed operational workflows.
