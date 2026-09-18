@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "corredor:segment-054:change:simulation-001",
+  "evidence_type": "geospatial-segment-change",
+  "classification": "public",
+  "producer": {
+    "repository_uri": "https://github.com/MartinnCG/operational-systems-design",
+    "revision": "contract-example-v1",
+    "artifact_path": "examples/corredor-segment-change-simulated-envelope-v1.json",
+    "source_mode": "simulated",
+    "transform_version": "segment-change-example-1.0"
+  },
+  "evidence_time": {
+    "observed_from": "2026-09-01T00:00:00Z",
+    "observed_to": "2026-09-01T00:00:00Z",
+    "generated_at": "2026-09-18T00:00:00Z"
+  },
+  "facts": {
+    "simulation": true,
+    "compatible_producer": "MartinnCG/corredor-altura",
+    "segment_id": "segment-054",
+    "km_start": 53,
+    "km_end": 54,
+    "change_type": "surface-condition-review",
+    "change_state": "review-required"
+  },
+  "scope": {
+    "purpose": "Demonstrate the future segment-level change-control envelope using simulated values.",
+    "supports": [
+      "The common contract can represent a segment-scoped change requiring human review."
+    ],
+    "does_not_support": [
+      "A real observed change on segment 054.",
+      "Road closure, maintenance need, incident probability or safety risk.",
+      "Any current field condition."
+    ]
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "subject": "simulated facts object in this contract example",
+    "digest": "81bf2c0407c59b18c072d57b24737305a3cc488643692cf9290a0016e024be6c"
+  },
+  "upstream_evidence_ids": []
+}
