@@ -6,6 +6,10 @@ This repository is the central index for my work in **operational data and AI
 systems**: systems that transform field, sensor and analytical data into
 reproducible, traceable and decision-oriented evidence.
 
+It coordinates architecture, contracts and public claims; it does not physically
+contain or replace the component repositories. Each project remains authoritative
+for its own implementation, tests, releases and limitations.
+
 ## Professional focus
 
 I work at the intersection of:
@@ -27,7 +31,7 @@ limitations and outputs can be inspected and defended.
 |---|---|---|---|
 | [Corredor de Altura](https://github.com/MartinnCG/corredor-altura) | Applied geospatial data science | Calibrated 130 km corridor, reproducible feature pipeline, relative-exposure model, GIS products, dashboard and automated data-contract checks | [Analytical v1.0](https://github.com/MartinnCG/corredor-altura/releases/tag/v1.0) |
 | [Edge Operational Evidence System](https://github.com/MartinnCG/edge-operational-evidence-system) | Flagship systems engineering | Canonical events, durable ledger, deterministic replay, privacy-preserving historical qualification, verified bundles, real MQTT, recovery and certificate-based authorization | [v0.2.0](https://github.com/MartinnCG/edge-operational-evidence-system/releases/tag/v0.2.0) + [M9A](https://github.com/MartinnCG/edge-operational-evidence-system/blob/main/docs/m9a-historical-qualification-v1.md) |
-| [AI/ML Systems Architecture Labs](https://github.com/MartinnCG/ai-ml-systems-architecture-labs) | Focused technical experiments | Explicit boundaries, invariants, failure modes and minimal reference implementations | Active laboratory; experiments only when tied to a concrete system question |
+| [AI/ML Systems Architecture Labs](https://github.com/MartinnCG/ai-ml-systems-architecture-labs) | Governed AI systems experiments | Lab 03 M0–M3: trust boundaries, deterministic evidence controls, provider-neutral model adapter, typed semantic support and adversarial evaluation | [M3 verified](https://github.com/MartinnCG/ai-ml-systems-architecture-labs/blob/main/labs/lab-03-governed-evidence-agent/reference_impl/python/m3-evaluation-report.json); M4 integration pending |
 | [Deterministic Replay System](https://github.com/MartinnCG/deterministic-replay-system) | Reference mechanism | State reconstruction from an ordered event stream and integrity verification | Prototype; the mechanism is represented in the Edge evidence path |
 
 ## Flagship directions
@@ -79,7 +83,10 @@ without exposing internal storage or granting authority to an AI consumer.
 The [system-of-systems map](architecture/system-of-systems-v1.md) defines
 repository responsibilities and coupling rules. The
 [human explanation guide](learning/system-explanation-v1.md) records the
-reasoning needed to present and defend the architecture.
+reasoning needed to present and defend the architecture. The
+[portfolio synchronization policy](governance/portfolio-synchronization.md)
+requires material scope, evidence and integration changes to update or explicitly
+defer the central narrative.
 
 ## Engineering principles
 
