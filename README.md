@@ -69,6 +69,18 @@ future M9B redeployment campaign.
 See the portfolio case:
 [Qualifying historical field evidence](case-studies/m9a-historical-field-evidence.md).
 
+## System-of-systems integration
+
+The repositories remain independently useful but now connect through a proposed
+[Operational Evidence Envelope v1](contracts/). The contract preserves producer,
+revision, artifact, time, structured facts, integrity and explicit limitations
+without exposing internal storage or granting authority to an AI consumer.
+
+The [system-of-systems map](architecture/system-of-systems-v1.md) defines
+repository responsibilities and coupling rules. The
+[human explanation guide](learning/system-explanation-v1.md) records the
+reasoning needed to present and defend the architecture.
+
 ## Engineering principles
 
 Every substantial contribution should strengthen at least one of these
@@ -103,8 +115,11 @@ consistent ability to frame, build, verify and communicate operational systems.
    and deterministic reconstruction.
 4. Defer M9B until physical data and repeated redeployments can be evidenced
    honestly.
-5. Publish architecture labs only when they test a concrete system question.
-6. Connect proven components into governed operational workflows.
+5. Maintain Lab 03 as the governed evidence-consumer pattern.
+6. Review and freeze Operational Evidence Envelope v1.
+7. Implement a contract-tested Edge M9A producer adapter.
+8. Implement a clearly simulated Corredor segment-change producer adapter.
+9. Demonstrate both profiles through the governed consumer path.
 
 ## Scope boundary
 
