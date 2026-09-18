@@ -25,6 +25,13 @@
 - [ ] Limitations and uncertainty remain visible.
 - [ ] Human authority is explicit where the output may influence a decision.
 
+## Portfolio synchronization
+
+- [ ] Central impact is classified as `none`, `sync-required`,
+      `pending-evidence` or `deprecation`.
+- [ ] Material impact links the relevant central or component issue.
+- [ ] Public roles, versions, claims and non-claims remain current.
+
 ## What did not change
 
 <!-- Identify released behaviour, analytical meaning or interfaces preserved by this PR. -->
