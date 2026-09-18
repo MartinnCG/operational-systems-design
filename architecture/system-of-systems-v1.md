@@ -69,3 +69,12 @@ reason to couple systems.
 4. Make Lab 03 consume both producer profiles through the same envelope.
 5. Publish an integrated human-reviewed case without claiming operational
    authority.
+
+## Evolution control
+
+The architecture is synchronized through the
+[portfolio synchronization policy](../governance/portfolio-synchronization.md).
+Material component changes declare whether the central scope is unaffected,
+requires synchronization, awaits evidence or must deprecate an earlier claim.
+The central repository is updated from merged producer evidence, never from an
+unverified intention.
