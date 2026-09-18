@@ -3,16 +3,26 @@ name: Evidence contract
 on:
   pull_request:
     paths:
+      - "README.md"
+      - "architecture/**"
       - "contracts/**"
       - "examples/**"
+      - "governance/**"
+      - "learning/**"
       - "scripts/validate_evidence_examples.py"
+      - ".github/pull_request_template.md"
       - ".github/workflows/evidence-contract.yml"
   push:
     branches: [main]
     paths:
+      - "README.md"
+      - "architecture/**"
       - "contracts/**"
       - "examples/**"
+      - "governance/**"
+      - "learning/**"
       - "scripts/validate_evidence_examples.py"
+      - ".github/pull_request_template.md"
       - ".github/workflows/evidence-contract.yml"
 
 permissions:
