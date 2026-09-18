@@ -1,0 +1,30 @@
+name: Evidence contract
+
+on:
+  pull_request:
+    paths:
+      - "contracts/**"
+      - "examples/**"
+      - "scripts/validate_evidence_examples.py"
+      - ".github/workflows/evidence-contract.yml"
+  push:
+    branches: [main]
+    paths:
+      - "contracts/**"
+      - "examples/**"
+      - "scripts/validate_evidence_examples.py"
+      - ".github/workflows/evidence-contract.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate public evidence envelopes
+        run: python scripts/validate_evidence_examples.py
