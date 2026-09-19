@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MartinnCG/operational-systems-design/blob/main/contracts/operational-evidence-envelope-v1.schema.json",
+  "title": "Operational Evidence Envelope v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "evidence_id",
+    "evidence_type",
+    "classification",
+    "producer",
+    "evidence_time",
+    "facts",
+    "scope",
+    "integrity"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "evidence_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._:-]{2,127}$"
+    },
+    "evidence_type": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,63}$"
+    },
+    "classification": {
+      "enum": ["public", "sanitised"]
+    },
+    "producer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository_uri",
+        "revision",
+        "artifact_path",
+        "source_mode",
+        "transform_version"
+      ],
+      "properties": {
+        "repository_uri": {"type": "string", "format": "uri"},
+        "revision": {"type": "string", "minLength": 7},
+        "artifact_path": {"type": "string", "minLength": 1},
+        "source_mode": {
+          "enum": ["observed", "historical-import", "derived", "simulated"]
+        },
+        "transform_version": {"type": "string", "minLength": 1}
+      }
+    },
+    "evidence_time": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observed_from", "observed_to", "generated_at"],
+      "properties": {
+        "observed_from": {"type": "string", "format": "date-time"},
+        "observed_to": {"type": "string", "format": "date-time"},
+        "generated_at": {"type": "string", "format": "date-time"}
+      }
+    },
+    "facts": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["purpose", "supports", "does_not_support"],
+      "properties": {
+        "purpose": {"type": "string", "minLength": 1},
+        "supports": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "does_not_support": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "integrity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["algorithm", "subject", "digest"],
+      "properties": {
+        "algorithm": {"const": "sha256"},
+        "subject": {"type": "string", "minLength": 1},
+        "digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "upstream_evidence_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9._:-]{2,127}$"
+      },
+      "default": []
+    }
+  }
+}

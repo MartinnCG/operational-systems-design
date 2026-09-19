@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "edge:m9a:qualification:2026-09-17",
+  "evidence_type": "qualification-result",
+  "classification": "sanitised",
+  "producer": {
+    "repository_uri": "https://github.com/MartinnCG/edge-operational-evidence-system",
+    "revision": "6eaffa43b0a66b91e6b272b4c81e66cfb118bfb0",
+    "artifact_path": "m9a-results-v1.json",
+    "source_mode": "historical-import",
+    "transform_version": "m9a-1.0"
+  },
+  "evidence_time": {
+    "observed_from": "2026-02-13T00:00:00Z",
+    "observed_to": "2026-05-25T23:59:59Z",
+    "generated_at": "2026-09-17T00:00:00Z"
+  },
+  "facts": {
+    "accepted_records": 38349,
+    "rejected_records": 0,
+    "source_streams": 6,
+    "independent_replay_match": true,
+    "documented_active_evidence_days": 70
+  },
+  "scope": {
+    "purpose": "Demonstrate privacy-preserving historical migration and deterministic state reconstruction.",
+    "supports": [
+      "The documented historical shapes crossed the canonical event boundary.",
+      "Two independent replays produced the same final state."
+    ],
+    "does_not_support": [
+      "Current physical deployment or uninterrupted uptime.",
+      "Original transport latency, calibrated sensing or safety suitability.",
+      "Current hardware, MQTT, mTLS or redeployment continuity."
+    ]
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "subject": "private historical source dataset recorded by the public M9A result",
+    "digest": "c6d40d5d38cefca3b1efdcd4afcec3812a1d3e0eb9839f6a9905be25c6573b8f"
+  },
+  "upstream_evidence_ids": []
+}
