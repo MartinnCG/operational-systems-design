@@ -31,6 +31,7 @@ limitations and outputs can be inspected and defended.
 |---|---|---|---|
 | [Corredor de Altura](https://github.com/MartinnCG/corredor-altura) | Applied geospatial data science | Calibrated 130 km corridor, reproducible feature pipeline, relative-exposure model, GIS products, dashboard and automated data-contract checks | [Analytical v1.0](https://github.com/MartinnCG/corredor-altura/releases/tag/v1.0) |
 | [Edge Operational Evidence System](https://github.com/MartinnCG/edge-operational-evidence-system) | Flagship systems engineering | Canonical events, durable ledger, deterministic replay, privacy-preserving historical qualification, verified bundles, real MQTT, recovery and certificate-based authorization | [v0.2.0](https://github.com/MartinnCG/edge-operational-evidence-system/releases/tag/v0.2.0) + [M9A](https://github.com/MartinnCG/edge-operational-evidence-system/blob/main/docs/m9a-historical-qualification-v1.md) |
+| [Mining Operational Evidence Lab](https://github.com/MartinnCG/mining-operational-evidence-lab) | Mining-domain translation | Public synthetic shutdown-handover architecture, confidentiality boundary, field-learning protocol, dual professional/operational audience and evidence-driven roadmap | [M0 foundation](https://github.com/MartinnCG/mining-operational-evidence-lab/commit/c140f118c06b69d6f1df1cf6e4bcefd8eabec548) |
 | [AI/ML Systems Architecture Labs](https://github.com/MartinnCG/ai-ml-systems-architecture-labs) | Governed AI systems experiments | Lab 03 M0–M3: trust boundaries, deterministic evidence controls, provider-neutral model adapter, typed semantic support and adversarial evaluation | [M3 verified](https://github.com/MartinnCG/ai-ml-systems-architecture-labs/blob/main/labs/lab-03-governed-evidence-agent/reference_impl/python/m3-evaluation-report.json); M4 integration pending |
 | [Deterministic Replay System](https://github.com/MartinnCG/deterministic-replay-system) | Reference mechanism | State reconstruction from an ordered event stream and integrity verification | Prototype; the mechanism is represented in the Edge evidence path |
 
@@ -44,6 +45,23 @@ sources can be transformed into a common, segment-level analytical model.
 The published index represents **relative exposure within the studied
 corridor**. It is not an absolute-risk score and does not predict incidents,
 failures, closures or maintenance demand.
+
+### Mining-domain operational evidence
+
+Mining Operational Evidence Lab translates generalized Queensland mining and
+shutdown experience into public, synthetic system artifacts without exposing
+employer or site information.
+
+It deliberately separates two audiences:
+
+- clients, recruiters and companies evaluating a sustained body of systems work;
+- an incoming supervisor represented as the operational persona inside the
+  synthetic shutdown-handover case.
+
+Its first design boundary uses the work front as the handover unit and tests
+whether reported, evidence-supported, pending, conflicting and unknown states
+can remain distinguishable. This is a professional evidence asset, not a claim
+of employer deployment, safety authority or permission to work.
 
 ### Edge operational evidence
 
@@ -122,11 +140,16 @@ consistent ability to frame, build, verify and communicate operational systems.
    and deterministic reconstruction.
 4. Defer M9B until physical data and repeated redeployments can be evidenced
    honestly.
-5. Maintain Lab 03 as the governed evidence-consumer pattern.
-6. Review and freeze Operational Evidence Envelope v1.
-7. Implement a contract-tested Edge M9A producer adapter.
-8. Implement a clearly simulated Corredor segment-change producer adapter.
-9. Demonstrate both profiles through the governed consumer path.
+5. Maintain Mining Operational Evidence Lab M0 as the public domain-translation
+   boundary.
+6. Build its M1 synthetic shutdown-handover contract around work-front state and
+   evidence ambiguity.
+7. Maintain Lab 03 as the governed evidence-consumer pattern.
+8. Review and freeze Operational Evidence Envelope v1.
+9. Implement a contract-tested Edge M9A producer adapter.
+10. Implement a clearly simulated Corredor segment-change producer adapter.
+11. Implement a synthetic mining handover producer adapter after M1 stabilises.
+12. Demonstrate the producer profiles through the governed consumer path.
 
 ## Scope boundary
 
