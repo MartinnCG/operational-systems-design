@@ -11,6 +11,7 @@ Operational Evidence Envelope.
 flowchart TD
     E["Edge Evidence<br/>temporal and IoT"] --> C["Evidence Envelope v1"]
     G["Corredor de Altura<br/>geospatial segments"] --> C
+    M["Mining Evidence Lab<br/>synthetic handovers"] --> C
     C --> A["AI/ML Labs<br/>governed interpretation"]
     A --> H["Human-reviewed brief"]
     C --> O["Operational Systems Design<br/>contracts and architecture"]
@@ -23,6 +24,7 @@ flowchart TD
 |---|---|---|
 | Edge Operational Evidence System | Events, ledgers, replay, edge transport evidence and M9A qualification | Geospatial interpretation or final operational decisions |
 | Corredor de Altura | Segment geometry, calibrated spatial features, relative exposure and change evidence | Live device continuity or safety authorization |
+| Mining Operational Evidence Lab | Mining-domain scenarios, synthetic shutdown handovers, work-front contracts and sanitized field-learning abstractions | Employer workflows, production deployment, permits, isolations or safety authority |
 | AI/ML Systems Architecture Labs | Evidence validation, typed claims, abstention, semantic guards and audit records | Producer truth, unrestricted retrieval or actuator authority |
 | Operational Systems Design | Cross-repository contracts, architecture, learning narrative and portfolio cases | Reimplementing producer pipelines |
 | LUTMAR, future | Vendor-agnostic service packaging and client-specific integration | Replacing OEM, sensor or corporate source systems |
@@ -30,6 +32,18 @@ flowchart TD
 Crypto Alpha OS remains outside this topology until it has a genuine
 operational-evidence use case. Similar technology alone is not a sufficient
 reason to couple systems.
+
+## Audience separation
+
+Mining Operational Evidence Lab makes an important architectural distinction:
+
+- the public portfolio audience is a client, recruiter or company evaluating
+  Martin's evidence of domain translation and systems capability;
+- the operational persona inside the synthetic handover is an incoming
+  supervisor.
+
+The first group evaluates the work. The second exercises the model. Neither
+creates evidence of deployment or operational authority.
 
 ## End-to-end evidence path
 
@@ -48,6 +62,7 @@ reason to couple systems.
 - Consumers never write back into producer evidence.
 - A simulated source is labelled at the producer boundary and cannot be
   relabelled as observed downstream.
+- Mining-domain examples must remain synthetic, generalized or openly sourced.
 - Cross-repository changes use linked issues and explicit compatibility notes.
 
 ## Failure containment
@@ -59,6 +74,7 @@ reason to couple systems.
 | Model invents or alters a fact | Typed semantic validation rejects it |
 | Evidence is stale or conflicting | Brief is qualified, rejected or abstained |
 | Private data reaches a public exporter | Classification and boundary validation fail closed |
+| Synthetic mining data is presented as employer evidence | Provenance, mode and claims checks reject the representation |
 | One repository becomes unavailable | Pinned revision and artifact identity remain in provenance |
 
 ## Evolution path
@@ -66,8 +82,10 @@ reason to couple systems.
 1. Publish and review Envelope v1 in the central architecture repository.
 2. Add an Edge M9A exporter and contract test.
 3. Add a clearly simulated Corredor segment-change exporter.
-4. Make Lab 03 consume both producer profiles through the same envelope.
-5. Publish an integrated human-reviewed case without claiming operational
+4. Stabilise the Mining Lab M1 work-front handover contract.
+5. Add a clearly synthetic mining handover exporter.
+6. Make Lab 03 consume the producer profiles through the same envelope.
+7. Publish integrated human-reviewed cases without claiming operational
    authority.
 
 ## Evolution control
